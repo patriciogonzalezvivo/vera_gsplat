@@ -12,8 +12,34 @@ attribute float     a_index;
 varying vec4        v_color;
 varying vec2        v_position;
 
-#include "lygia/math/transpose.glsl"
-#include "lygia/math/toMat3.glsl"
+#if !defined(FNC_TRANSPOSE) && (__VERSION__ < 120)
+#define FNC_TRANSPOSE
+mat3 transpose(in mat3 m) {
+    return mat3(    m[0][0], m[1][0], m[2][0],
+                    m[0][1], m[1][1], m[2][1],
+                    m[0][2], m[1][2], m[2][2] );
+}
+
+mat4 transpose(in mat4 m) {
+    return mat4(    vec4(m[0][0], m[1][0], m[2][0], m[3][0]),
+                    vec4(m[0][1], m[1][1], m[2][1], m[3][1]),
+                    vec4(m[0][2], m[1][2], m[2][2], m[3][2]),
+                    vec4(m[0][3], m[1][3], m[2][3], m[3][3])    );
+}
+#endif
+
+#ifndef FNC_TOMAT3
+#define FNC_TOMAT3
+mat3 toMat3(mat4 m) {
+    #if __VERSION__ >= 300
+    return mat3(m);
+    #else
+    return mat3(m[0].xyz, m[1].xyz, m[2].xyz);
+    #endif
+}
+#endif
+
+
 
 void main() {
     float width = u_tex0Resolution.x;
@@ -85,6 +111,7 @@ void main() {
     }
     
     vec2 diagonalVector = normalize(vec2(cov2d[0][1], lambda1 - cov2d[0][0]));
+
     // Reduce scale for finer splat coverage
     float scale = 2.5;
     vec2 majorAxis = scale * min(sqrt(2.0 * lambda1), 1024.0) * diagonalVector;
