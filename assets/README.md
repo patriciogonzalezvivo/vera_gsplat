@@ -1,0 +1,1 @@
+Put on this folder all the external assets of your app
