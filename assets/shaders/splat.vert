@@ -12,6 +12,9 @@ attribute float     a_index;
 varying vec4        v_color;
 varying vec2        v_position;
 
+#include "lygia/math/transpose.glsl"
+#include "lygia/math/toMat3.glsl"
+
 void main() {
     float width = u_tex0Resolution.x;
     float height = u_tex0Resolution.y;
@@ -63,7 +66,7 @@ void main() {
         0.0, 0.0, 0.0
     );
     
-    mat3 T = transpose(mat3(u_viewMatrix)) * J;
+    mat3 T = transpose(toMat3(u_viewMatrix)) * J;
     mat3 cov2d = transpose(T) * Vrk * T;
     
     // Add low-pass filter (reduce value for finer splats)
