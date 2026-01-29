@@ -11,7 +11,8 @@ class MainApp : public vera::App {
         camera()->setPosition(glm::vec3(0.0f, 0.0f, 5.0f));
         camera()->lookAt(glm::vec3(0.0f, 1.0f, 0.0f));
 
-        gsplat.load("../cactus.ply");
+        // gsplat.load("../cactus.ply");
+        gsplat.load("../flower.splat");
     }
 
     void update() {
