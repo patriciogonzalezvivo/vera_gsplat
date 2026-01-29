@@ -24,9 +24,9 @@ class MainApp : public vera::App {
         camera()->lookAt(glm::vec3(0.0f, 0.0f, 0.0f));
 
         gsplat.load("../cactus.ply");
+        addShader("splat_shader", loadGlslFrom("shaders/splat.frag"), loadGlslFrom("shaders/splat.vert"));
         texture(gsplat.getTexture(), "u_tex0");
 
-        addShader("splat_shader", loadGlslFrom("shaders/splat.frag"), loadGlslFrom("shaders/splat.vert"));
 
         // Create VAO
         glGenVertexArrays(1, &vao);
@@ -76,13 +76,15 @@ class MainApp : public vera::App {
 
         // glUseProgram(shader("splat_shader")->getProgram());
         Shader* splat_shader = shader("splat_shader");
+        Texture* splat_texture = texture("u_tex0");
+
         splat_shader->use();
 
         glBindVertexArray(vao);
 
         // Set uniforms
-        splat_shader->setUniformTexture("u_tex0", texture("u_tex0")); // Texture unit 0
-        splat_shader->setUniform("u_tex0Resolution", glm::vec2(texture("u_tex0")->getWidth(), texture("u_tex0")->getHeight()));
+        splat_shader->setUniformTexture("u_tex0", splat_texture); // Texture unit 0
+        splat_shader->setUniform("u_tex0Resolution", glm::vec2(splat_texture->getWidth(), splat_texture->getHeight()));
         splat_shader->setUniform("u_projectionMatrix", camera()->getProjectionMatrix());
         splat_shader->setUniform("u_viewMatrix", camera()->getViewMatrix());
         splat_shader->setUniform("u_resolution", glm::vec2(width, height));
@@ -99,7 +101,7 @@ class MainApp : public vera::App {
         
         glBindBuffer(GL_ARRAY_BUFFER, indexVBO);
         if (a_index == -1) {
-            a_index = glGetAttribLocation(shader("splat_shader")->getProgram(), "a_index");
+            a_index = glGetAttribLocation(splat_shader->getProgram(), "a_index");
         }
         glEnableVertexAttribArray(a_index);
         glVertexAttribIPointer(a_index, 1, GL_UNSIGNED_INT, 0, 0);
