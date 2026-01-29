@@ -5,6 +5,7 @@
 class MainApp : public vera::App {
 
     Gsplat gsplat;
+    Texture* splat_texture = nullptr;
 
     // Buffers
     GLuint vao;
@@ -16,16 +17,18 @@ class MainApp : public vera::App {
     GLint a_index = -1;
 
     std::vector<uint32_t> depthIndex;
+    std::vector<float> indexFloats;
 
     void setup() {
         background(0.0f);
         
-        camera()->setPosition(glm::vec3(0.0f, 0.0f, 10.0f));
-        camera()->lookAt(glm::vec3(0.0f, 0.0f, 0.0f));
+        camera()->setPosition(glm::vec3(0.0f, 0.0f, 5.0f));
+        camera()->lookAt(glm::vec3(0.0f, 1.0f, 0.0f));
 
-        gsplat.load("../cactus.ply");
         addShader("splat_shader", loadGlslFrom("shaders/splat.frag"), loadGlslFrom("shaders/splat.vert"));
-        texture(gsplat.getTexture(), "u_tex0");
+        
+        gsplat.load("../cactus.ply");
+        splat_texture = gsplat.getTexture();
 
 
         // Create VAO
@@ -44,13 +47,28 @@ class MainApp : public vera::App {
         glBindBuffer(GL_ARRAY_BUFFER, positionVBO);
         glBufferData(GL_ARRAY_BUFFER, sizeof(quadVertices), quadVertices, GL_STATIC_DRAW);
         
-        a_position = glGetAttribLocation(shader("splat_shader")->getProgram(), "a_position");
-        glEnableVertexAttribArray(a_position);
-        glVertexAttribPointer(a_position, 2, GL_FLOAT, GL_FALSE, 0, 0);
+        Shader* s = shader("splat_shader");
+        if (s) {
+            a_position = glGetAttribLocation(s->getProgram(), "a_position");
+            if (a_position != -1) {
+                glEnableVertexAttribArray(a_position);
+                glVertexAttribPointer(a_position, 2, GL_FLOAT, GL_FALSE, 0, 0);
+            }
         
-        // Index buffer (per-instance)
-        glGenBuffers(1, &indexVBO);
-        
+            // Index buffer (per-instance)
+            glGenBuffers(1, &indexVBO);
+            glBindBuffer(GL_ARRAY_BUFFER, indexVBO);
+            glBufferData(GL_ARRAY_BUFFER, 0, nullptr, GL_DYNAMIC_DRAW);
+
+            a_index = glGetAttribLocation(s->getProgram(), "a_index");
+            if (a_index != -1) {
+                glEnableVertexAttribArray(a_index);
+                // Use glVertexAttribPointer to allow conversion to float in shader
+                glVertexAttribPointer(a_index, 1, GL_FLOAT, GL_FALSE, 0, 0); 
+                glVertexAttribDivisor(a_index, 1);
+            }
+        }
+
         glBindVertexArray(0);
     }
 
@@ -60,56 +78,45 @@ class MainApp : public vera::App {
     void draw() {
         orbitControl();
 
+        if (!splat_texture) { return; }
+
         // Sort splats by depth
         glm::mat4 viewProj = camera()->getProjectionMatrix() * camera()->getViewMatrix();
         gsplat.sort(viewProj, depthIndex);
 
         // Upload sorted indices
+        indexFloats.resize(depthIndex.size());
+        for(size_t i = 0; i < depthIndex.size(); i++) {
+            indexFloats[i] = (float)depthIndex[i];
+        }
+
         glBindBuffer(GL_ARRAY_BUFFER, indexVBO);
-        glBufferData(GL_ARRAY_BUFFER, depthIndex.size() * sizeof(uint32_t), 
-                    depthIndex.data(), GL_STREAM_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, indexFloats.size() * sizeof(float), indexFloats.data(), GL_STREAM_DRAW);
 
-        glDisable(GL_DEPTH_TEST);
-        glEnable(GL_BLEND);
-        glBlendFuncSeparate(GL_ONE_MINUS_DST_ALPHA, GL_ONE, GL_ONE_MINUS_DST_ALPHA, GL_ONE);
-        glBlendEquationSeparate(GL_FUNC_ADD, GL_FUNC_ADD);
+        blendMode(BLEND_ALPHA);
 
-        // glUseProgram(shader("splat_shader")->getProgram());
         Shader* splat_shader = shader("splat_shader");
-        Texture* splat_texture = texture("u_tex0");
+        if (!splat_shader) {
+            return;
+        }
 
         splat_shader->use();
 
         glBindVertexArray(vao);
 
         // Set uniforms
-        splat_shader->setUniformTexture("u_tex0", splat_texture); // Texture unit 0
+        splat_shader->setUniformTexture("u_tex0", splat_texture, 0); // Use member variable directly
         splat_shader->setUniform("u_tex0Resolution", glm::vec2(splat_texture->getWidth(), splat_texture->getHeight()));
-        splat_shader->setUniform("u_projectionMatrix", camera()->getProjectionMatrix());
-        splat_shader->setUniform("u_viewMatrix", camera()->getViewMatrix());
-        splat_shader->setUniform("u_resolution", glm::vec2(width, height));
         
         // Compute focal lengths from FOV
         float fovRad = glm::radians(camera()->getFOV());
         float fy = height / (2.0f * std::tan(fovRad / 2.0f));
         splat_shader->setUniform("u_focal", glm::vec2(fy, fy));
         
-        // Setup vertex attributes
-        glBindBuffer(GL_ARRAY_BUFFER, positionVBO);
-        glEnableVertexAttribArray(a_position);
-        glVertexAttribPointer(a_position, 2, GL_FLOAT, GL_FALSE, 0, 0);
-        
-        glBindBuffer(GL_ARRAY_BUFFER, indexVBO);
-        if (a_index == -1) {
-            a_index = glGetAttribLocation(splat_shader->getProgram(), "a_index");
-        }
-        glEnableVertexAttribArray(a_index);
-        glVertexAttribIPointer(a_index, 1, GL_UNSIGNED_INT, 0, 0);
-        glVertexAttribDivisor(a_index, 1);
-
-        
         // Draw
-        glDrawArraysInstanced(GL_TRIANGLE_FAN, 0, 4, gsplat.count());
+        if (gsplat.count() > 0) {
+            glDrawArraysInstanced(GL_TRIANGLE_FAN, 0, 4, gsplat.count());
+        }
         
         glBindVertexArray(0);
     }
