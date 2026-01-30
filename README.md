@@ -81,8 +81,8 @@ cd ..
 ### For windows managers like MacOS, Windows or Linux (with X11 Window Manager) (all through GLFW) 
 
 ```bash
-git clone --recursive https://github.com/patriciogonzalezvivo/vera_empty.git
-cd vera_empty
+git clone --recursive https://github.com/patriciogonzalezvivo/vera_gsplat.git
+cd vera_gsplat
 mkdir build
 cd build
 cmake ..
@@ -93,8 +93,8 @@ make
 ### For Linux with no X11 Window Manager
 
 ```bash
-git clone --recursive https://github.com/patriciogonzalezvivo/vera_empty.git
-cd vera_empty
+git clone --recursive https://github.com/patriciogonzalezvivo/vera_gsplat.git
+cd vera_gsplat
 mkdir build
 cd build
 cmake -DNO_X11=TRUE ..
