@@ -14,11 +14,11 @@ file(GLOB ROOT_SOURCE
     "${PROJECT_SOURCE_DIR}/src/*.cpp"
 )
 
-add_executable(gsplat
+add_executable(vera_app
     ${ROOT_SOURCE}
 )
 
-set_target_properties(gsplat PROPERTIES
+set_target_properties(vera_app PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
@@ -27,8 +27,8 @@ set_target_properties(gsplat PROPERTIES
 file(COPY   assets/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR} )
 
 if (EMSCRIPTEN)
-    # create a gsplat.html 
-    set_target_properties(gsplat PROPERTIES SUFFIX ".html")
+    # create a vera_app.html 
+    set_target_properties(vera_app PROPERTIES SUFFIX ".html")
 
     # copy the index.html 
     file(COPY   assets/wasm/index.html DESTINATION ${CMAKE_CURRENT_BINARY_DIR} )
@@ -54,11 +54,11 @@ if (EMSCRIPTEN)
     set(LFLAGS "${LFLAGS} -s EXPORTED_FUNCTIONS='[  \"_main\", \"_malloc\" ]' ")
     set(LFLAGS "${LFLAGS} -s EXPORTED_RUNTIME_METHODS='[\"ccall\",\"cwrap\"]' ")
     
-    set_target_properties(gsplat PROPERTIES LINK_FLAGS "${LFLAGS}")
-    target_link_libraries(gsplat PRIVATE vera glfw webxr)
+    set_target_properties(vera_app PROPERTIES LINK_FLAGS "${LFLAGS}")
+    target_link_libraries(vera_app PRIVATE vera glfw webxr)
     
 else()
-    target_link_libraries(gsplat PRIVATE vera pthread dl)
+    target_link_libraries(vera_app PRIVATE vera pthread dl)
 
 endif()
 

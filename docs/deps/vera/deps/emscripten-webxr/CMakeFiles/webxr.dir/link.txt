@@ -1,0 +1,2 @@
+/home/patricio/Desktop/emsdk/upstream/emscripten/emar qc libwebxr.a CMakeFiles/webxr.dir/webxr.cpp.o
+/home/patricio/Desktop/emsdk/upstream/emscripten/emranlib libwebxr.a

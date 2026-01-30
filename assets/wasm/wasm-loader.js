@@ -1,4 +1,4 @@
-class ChartLoader extends HTMLElement {
+class WasmLoader extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
@@ -130,9 +130,9 @@ class ChartLoader extends HTMLElement {
             },
             postRun: () => {
                 // set weaver-loader visibility to hidden
-                const chartLoader = document.querySelector('wasm-loader');
-                if (chartLoader) {
-                    chartLoader.style.visibility = 'hidden';
+                const wasm_loader = document.querySelector('wasm-loader');
+                if (wasm_loader) {
+                    wasm_loader.style.visibility = 'hidden';
                 }
 
                 // destroy shadowRoot to prevent memory leaks
@@ -215,7 +215,7 @@ class ChartLoader extends HTMLElement {
   
         // Load WASM script
         const script = document.createElement('script');
-        script.src = 'gsplat.js';
+        script.src = 'vera_app.js';
         script.async = true;
         document.body.appendChild(script);
     }
@@ -228,4 +228,4 @@ class ChartLoader extends HTMLElement {
     }
 }
   
-customElements.define('wasm-loader', ChartLoader); 
+customElements.define('wasm-loader', WasmLoader); 

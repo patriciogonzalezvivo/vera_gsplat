@@ -1,0 +1,15 @@
+/home/patricio/Desktop/vera_gsplat/docs/CMakeFiles/vera_app.dir
+/home/patricio/Desktop/vera_gsplat/docs/CMakeFiles/edit_cache.dir
+/home/patricio/Desktop/vera_gsplat/docs/CMakeFiles/rebuild_cache.dir
+/home/patricio/Desktop/vera_gsplat/docs/deps/CMakeFiles/edit_cache.dir
+/home/patricio/Desktop/vera_gsplat/docs/deps/CMakeFiles/rebuild_cache.dir
+/home/patricio/Desktop/vera_gsplat/docs/deps/vera/CMakeFiles/edit_cache.dir
+/home/patricio/Desktop/vera_gsplat/docs/deps/vera/CMakeFiles/rebuild_cache.dir
+/home/patricio/Desktop/vera_gsplat/docs/deps/vera/deps/CMakeFiles/edit_cache.dir
+/home/patricio/Desktop/vera_gsplat/docs/deps/vera/deps/CMakeFiles/rebuild_cache.dir
+/home/patricio/Desktop/vera_gsplat/docs/deps/vera/deps/emscripten-webxr/CMakeFiles/webxr.dir
+/home/patricio/Desktop/vera_gsplat/docs/deps/vera/deps/emscripten-webxr/CMakeFiles/edit_cache.dir
+/home/patricio/Desktop/vera_gsplat/docs/deps/vera/deps/emscripten-webxr/CMakeFiles/rebuild_cache.dir
+/home/patricio/Desktop/vera_gsplat/docs/deps/vera/src/CMakeFiles/vera.dir
+/home/patricio/Desktop/vera_gsplat/docs/deps/vera/src/CMakeFiles/edit_cache.dir
+/home/patricio/Desktop/vera_gsplat/docs/deps/vera/src/CMakeFiles/rebuild_cache.dir

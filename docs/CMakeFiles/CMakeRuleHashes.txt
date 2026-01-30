@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+d70df245de5c695a5bbcd00962122ee0 deps/vera/deps/emscripten-webxr/webxr.cpp

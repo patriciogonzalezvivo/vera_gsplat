@@ -1,5 +1,4 @@
 #include "vera/app.h"
-#include "vera/types/gsplat.h"
 
 class MainApp : public vera::App {
 
