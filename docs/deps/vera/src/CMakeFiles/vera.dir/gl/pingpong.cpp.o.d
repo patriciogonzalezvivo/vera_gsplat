@@ -165,6 +165,7 @@ deps/vera/src/CMakeFiles/vera.dir/gl/pingpong.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__fwd/functional.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/nat.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/underlying_type.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_final.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__mutex/once_flag.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__functional/invoke.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__tuple/tuple_indices.h \
@@ -200,7 +201,6 @@ deps/vera/src/CMakeFiles/vera.dir/gl/pingpong.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__tuple/tuple_like_ext.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/conjunction.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/disjunction.h \
-  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_final.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_implicitly_default_constructible.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_swappable.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_trivially_relocatable.h \
@@ -269,6 +269,7 @@ deps/vera/src/CMakeFiles/vera.dir/gl/pingpong.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__tuple/tuple_like_no_subrange.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__fwd/complex.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__utility/rel_ops.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__utility/exchange.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/initializer_list \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__utility/no_destroy.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__utility/private_constructor_tag.h \
@@ -290,7 +291,6 @@ deps/vera/src/CMakeFiles/vera.dir/gl/pingpong.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__concepts/movable.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__concepts/swappable.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__concepts/class_or_enum.h \
-  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__utility/exchange.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__iterator/incrementable_traits.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_primary_template.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_valid_expansion.h \
@@ -556,6 +556,8 @@ deps/vera/src/CMakeFiles/vera.dir/gl/pingpong.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/transform.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/unique.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/unique_copy.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/execution \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_execution_policy.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/bit \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__system_error/error_category.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__system_error/error_code.h \

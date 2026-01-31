@@ -118,6 +118,7 @@ deps/vera/src/CMakeFiles/vera.dir/__/deps/glob/glob.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__fwd/functional.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/nat.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/underlying_type.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_final.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__new/allocate.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__cstddef/max_align_t.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/stddef.h \
@@ -170,7 +171,6 @@ deps/vera/src/CMakeFiles/vera.dir/__/deps/glob/glob.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__memory/allocator_destructor.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__memory/compressed_pair.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/datasizeof.h \
-  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_final.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__memory/shared_count.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/typeinfo \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/cstddef \
@@ -416,6 +416,7 @@ deps/vera/src/CMakeFiles/vera.dir/__/deps/glob/glob.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__iterator/ostream_iterator.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__iterator/ostreambuf_iterator.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__iterator/wrap_iter.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__iterator/reverse_access.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/variant \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__fwd/variant.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__utility/forward_like.h \
@@ -445,7 +446,6 @@ deps/vera/src/CMakeFiles/vera.dir/__/deps/glob/glob.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__fwd/string_view.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__iterator/data.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__iterator/empty.h \
-  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__iterator/reverse_access.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__iterator/size.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/algorithm \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/adjacent_find.h \
@@ -538,6 +538,8 @@ deps/vera/src/CMakeFiles/vera.dir/__/deps/glob/glob.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/transform.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/unique.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/unique_copy.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/execution \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_execution_policy.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/bit \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/dirent.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/bits/dirent.h \

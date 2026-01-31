@@ -200,6 +200,7 @@ deps/vera/src/CMakeFiles/vera.dir/types/gsplat.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/remove_volatile.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/result_of.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/underlying_type.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_final.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__bit/countr.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__utility/integer_sequence.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__iterator/aliasing_iterator.h \
@@ -290,7 +291,6 @@ deps/vera/src/CMakeFiles/vera.dir/types/gsplat.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__exception/exception.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__new/nothrow_t.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__memory/compressed_pair.h \
-  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_final.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__memory/noexcept_move_assign_container.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__memory/swap_allocator.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__memory/temp_value.h \
@@ -547,6 +547,8 @@ deps/vera/src/CMakeFiles/vera.dir/types/gsplat.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/transform.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/unique.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/unique_copy.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/execution \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_execution_policy.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/bit \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/array \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__iterator/static_bounded_iter.h \
@@ -973,9 +975,43 @@ deps/vera/src/CMakeFiles/vera.dir/types/gsplat.cpp.o: \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/ops/string.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/sstream \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/iomanip \
-  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/shaders/gsplat.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/ops/draw.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/vbo.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/vertexLayout.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/../types/mesh.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/../types/triangle.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/../types/material.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/shaders/defaultShaders.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/image.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/font.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/props.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/line.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/mesh.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/scene.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/texture.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/textureStream.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/textureStreamAudio.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/fbo.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/pingpong.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/pyramid.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/light.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/model.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/vbo.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/label.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../window.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/gl.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/polyline.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/html5.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/eventloop.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/console.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/html5_webgl.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/shaders/gsplat.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/deps/tinyply/tinyply.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/fstream \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__filesystem/path.h \
-  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/filesystem
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/filesystem \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/numeric \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__numeric/accumulate.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__numeric/adjacent_difference.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__numeric/inner_product.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__numeric/iota.h

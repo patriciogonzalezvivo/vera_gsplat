@@ -237,6 +237,7 @@ deps/vera/src/CMakeFiles/vera.dir/xr/holoPlay.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__tuple/tuple_like_no_subrange.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__fwd/complex.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__utility/rel_ops.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__utility/exchange.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/initializer_list \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__functional/binder1st.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__functional/binder2nd.h \
@@ -267,7 +268,6 @@ deps/vera/src/CMakeFiles/vera.dir/xr/holoPlay.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__concepts/movable.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__concepts/swappable.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__concepts/class_or_enum.h \
-  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__utility/exchange.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__iterator/incrementable_traits.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_primary_template.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_valid_expansion.h \
@@ -538,6 +538,8 @@ deps/vera/src/CMakeFiles/vera.dir/xr/holoPlay.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/transform.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/unique.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__algorithm/unique_copy.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/execution \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_execution_policy.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/bit \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/unordered_map \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__functional/is_transparent.h \
@@ -1013,7 +1015,5 @@ deps/vera/src/CMakeFiles/vera.dir/xr/holoPlay.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__numeric/adjacent_difference.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__numeric/inner_product.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__numeric/iota.h \
-  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/execution \
-  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_execution_policy.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/forward_list \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/valarray

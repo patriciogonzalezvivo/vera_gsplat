@@ -5,7 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!btn) return;
 
     const wrapper = document.getElementById('wrapper');
-    let isFullscreen = wrapper.classList.contains('fullscreen');
+    if (!wrapper) return;
+    
+    // Always start in windowed mode regardless of device
+    let isFullscreen = false;
+    wrapper.classList.remove('fullscreen');
+    wrapper.classList.add('windowed');
+    document.body.classList.add('windowed-mode');
 
     btn.addEventListener('click', () => {
         isFullscreen = !isFullscreen;

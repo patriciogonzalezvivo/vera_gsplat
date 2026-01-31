@@ -31,7 +31,6 @@ class WasmLoader extends HTMLElement {
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background: black;
                 font-family: 'Lucida Console', Monaco, monospace;
             }
 
@@ -54,7 +53,6 @@ class WasmLoader extends HTMLElement {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background: rgba(0, 0, 0, 0.8);
                 z-index: 1000;
             }
 
@@ -75,7 +73,6 @@ class WasmLoader extends HTMLElement {
                 border-bottom: 5px solid rgba(0, 0, 0, 0);
                 border-top: 5px solid rgba(0, 0, 0, 0);
                 border-radius: 100%;
-                background-color: rgba(0, 0, 0, 0);
             }
 
             @-webkit-keyframes rotation {

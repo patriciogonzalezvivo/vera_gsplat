@@ -71,7 +71,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmpskryi1pt.js
+// include: /tmp/tmpr2_154su.js
 
   if (!Module['expectedDataFileDownloads']) Module['expectedDataFileDownloads'] = 0;
   Module['expectedDataFileDownloads']++;
@@ -203,21 +203,21 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
   })();
 
-// end include: /tmp/tmpskryi1pt.js
-// include: /tmp/tmpac941uw9.js
+// end include: /tmp/tmpr2_154su.js
+// include: /tmp/tmpm12tkttc.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/tmpac941uw9.js
-// include: /tmp/tmpp6i1uy_7.js
+  // end include: /tmp/tmpm12tkttc.js
+// include: /tmp/tmpc_tgx9ys.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/tmpp6i1uy_7.js
+  // end include: /tmp/tmpc_tgx9ys.js
 
 
 var arguments_ = [];
@@ -5338,6 +5338,11 @@ async function createWasm() {
     };
   var _glAttachShader = _emscripten_glAttachShader;
 
+  var _emscripten_glBeginQuery = (target, id) => {
+      GLctx.beginQuery(target, GL.queries[id]);
+    };
+  var _glBeginQuery = _emscripten_glBeginQuery;
+
   var _emscripten_glBindBuffer = (target, buffer) => {
       // Calling glBindBuffer with an unknown buffer will implicitly create a
       // new one.  Here we bypass `GL.counter` and directly using the ID passed
@@ -5444,6 +5449,11 @@ async function createWasm() {
 
   var _emscripten_glClearColor = (x0, x1, x2, x3) => GLctx.clearColor(x0, x1, x2, x3);
   var _glClearColor = _emscripten_glClearColor;
+
+  var _emscripten_glColorMask = (red, green, blue, alpha) => {
+      GLctx.colorMask(!!red, !!green, !!blue, !!alpha);
+    };
+  var _glColorMask = _emscripten_glColorMask;
 
   var _emscripten_glCompileShader = (shader) => {
       GLctx.compileShader(GL.shaders[shader]);
@@ -5569,6 +5579,14 @@ async function createWasm() {
     };
   var _glDeleteVertexArrays = _emscripten_glDeleteVertexArrays;
 
+  var _emscripten_glDepthFunc = (x0) => GLctx.depthFunc(x0);
+  var _glDepthFunc = _emscripten_glDepthFunc;
+
+  var _emscripten_glDepthMask = (flag) => {
+      GLctx.depthMask(!!flag);
+    };
+  var _glDepthMask = _emscripten_glDepthMask;
+
   var _emscripten_glDisable = (x0) => GLctx.disable(x0);
   var _glDisable = _emscripten_glDisable;
 
@@ -5653,6 +5671,9 @@ async function createWasm() {
     };
   var _glEnableVertexAttribArray = _emscripten_glEnableVertexAttribArray;
 
+  var _emscripten_glEndQuery = (x0) => GLctx.endQuery(x0);
+  var _glEndQuery = _emscripten_glEndQuery;
+
   var _emscripten_glFramebufferRenderbuffer = (target, attachment, renderbuffertarget, renderbuffer) => {
       GLctx.framebufferRenderbuffer(target, attachment, renderbuffertarget,
                                          GL.renderbuffers[renderbuffer]);
@@ -5676,6 +5697,12 @@ async function createWasm() {
         );
     };
   var _glGenFramebuffers = _emscripten_glGenFramebuffers;
+
+  var _emscripten_glGenQueries = (n, ids) => {
+      GL.genObject(n, ids, 'createQuery', GL.queries
+        );
+    };
+  var _glGenQueries = _emscripten_glGenQueries;
 
   var _emscripten_glGenRenderbuffers = (n, renderbuffers) => {
       GL.genObject(n, renderbuffers, 'createRenderbuffer', GL.renderbuffers
@@ -5922,6 +5949,25 @@ async function createWasm() {
       }
     };
   var _glGetProgramiv = _emscripten_glGetProgramiv;
+
+  var _emscripten_glGetQueryObjectuiv = (id, pname, params) => {
+      if (!params) {
+        // GLES2 specification does not specify how to behave if params is a null pointer. Since calling this function does not make sense
+        // if p == null, issue a GL error to notify user about it.
+        GL.recordError(0x501 /* GL_INVALID_VALUE */);
+        return;
+      }
+      var query = GL.queries[id];
+      var param = GLctx.getQueryParameter(query, pname);
+      var ret;
+      if (typeof param == 'boolean') {
+        ret = param ? 1 : 0;
+      } else {
+        ret = param;
+      }
+      HEAP32[((params)>>2)] = ret;
+    };
+  var _glGetQueryObjectuiv = _emscripten_glGetQueryObjectuiv;
 
   
   var _emscripten_glGetShaderInfoLog = (shader, maxLength, length, infoLog) => {
@@ -9614,6 +9660,8 @@ var wasmImports = {
   /** @export */
   glAttachShader: _glAttachShader,
   /** @export */
+  glBeginQuery: _glBeginQuery,
+  /** @export */
   glBindBuffer: _glBindBuffer,
   /** @export */
   glBindFramebuffer: _glBindFramebuffer,
@@ -9640,6 +9688,8 @@ var wasmImports = {
   /** @export */
   glClearColor: _glClearColor,
   /** @export */
+  glColorMask: _glColorMask,
+  /** @export */
   glCompileShader: _glCompileShader,
   /** @export */
   glCreateProgram: _glCreateProgram,
@@ -9660,6 +9710,10 @@ var wasmImports = {
   /** @export */
   glDeleteVertexArrays: _glDeleteVertexArrays,
   /** @export */
+  glDepthFunc: _glDepthFunc,
+  /** @export */
+  glDepthMask: _glDepthMask,
+  /** @export */
   glDisable: _glDisable,
   /** @export */
   glDisableVertexAttribArray: _glDisableVertexAttribArray,
@@ -9674,6 +9728,8 @@ var wasmImports = {
   /** @export */
   glEnableVertexAttribArray: _glEnableVertexAttribArray,
   /** @export */
+  glEndQuery: _glEndQuery,
+  /** @export */
   glFramebufferRenderbuffer: _glFramebufferRenderbuffer,
   /** @export */
   glFramebufferTexture2D: _glFramebufferTexture2D,
@@ -9681,6 +9737,8 @@ var wasmImports = {
   glGenBuffers: _glGenBuffers,
   /** @export */
   glGenFramebuffers: _glGenFramebuffers,
+  /** @export */
+  glGenQueries: _glGenQueries,
   /** @export */
   glGenRenderbuffers: _glGenRenderbuffers,
   /** @export */
@@ -9697,6 +9755,8 @@ var wasmImports = {
   glGetProgramInfoLog: _glGetProgramInfoLog,
   /** @export */
   glGetProgramiv: _glGetProgramiv,
+  /** @export */
+  glGetQueryObjectuiv: _glGetQueryObjectuiv,
   /** @export */
   glGetShaderInfoLog: _glGetShaderInfoLog,
   /** @export */

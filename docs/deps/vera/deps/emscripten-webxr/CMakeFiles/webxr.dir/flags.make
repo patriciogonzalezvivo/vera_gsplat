@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = @CMakeFiles/webxr.dir/includes_CXX.rsp
 
-CXX_FLAGS = -std=c++11 -DGLM_FORCE_CXX11 -DGLM_FORCE_SWIZZLE -Wno-psabi -fPIE -fPIC
+CXX_FLAGS = -std=c++14 -DGLM_FORCE_CXX11 -DGLM_FORCE_SWIZZLE -Wno-psabi -fPIE -fPIC
 
