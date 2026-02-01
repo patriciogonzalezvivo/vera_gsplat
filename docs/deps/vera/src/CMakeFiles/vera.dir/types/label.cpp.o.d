@@ -971,6 +971,9 @@ deps/vera/src/CMakeFiles/vera.dir/types/label.cpp.o: \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/model.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/mesh.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/gsplat.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/texture.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/shader.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/vbo.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/vertexLayout.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/../types/mesh.h \
@@ -980,12 +983,9 @@ deps/vera/src/CMakeFiles/vera.dir/types/label.cpp.o: \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/window.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/ops/draw.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/vbo.h \
-  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/shader.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/shaders/defaultShaders.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/image.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/line.h \
-  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/gsplat.h \
-  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/texture.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/scene.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/textureStream.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/textureStreamAudio.h \

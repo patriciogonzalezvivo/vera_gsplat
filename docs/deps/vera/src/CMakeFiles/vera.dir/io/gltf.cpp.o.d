@@ -978,6 +978,9 @@ deps/vera/src/CMakeFiles/vera.dir/io/gltf.cpp.o: \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/material.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/model.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/mesh.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/gsplat.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/texture.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/shader.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/vbo.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/vertexLayout.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/../types/mesh.h \

@@ -26,13 +26,14 @@ class MainApp : public vera::App {
         setDepthTest(false);
         
         push();
-        rotateX(-3.14f);
         // rotateY( radians(millis() * 0.025f) );
 
+        fill(1.0f);
         model( plant );
 
         if (bDebug) {
-            plant.renderDebug(*camera(), worldMatrix());
+            noFill();
+            model( plant );
         }
 
         pop();

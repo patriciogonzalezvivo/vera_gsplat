@@ -970,9 +970,33 @@ deps/vera/src/CMakeFiles/vera.dir/types/model.cpp.o: \
   /home/patricio/Desktop/vera_gsplat/deps/vera/deps/glm/glm/gtx/../gtx/../detail/qualifier.hpp \
   /home/patricio/Desktop/vera_gsplat/deps/vera/deps/glm/glm/gtx/quaternion.inl \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/mesh.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/gsplat.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/texture.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/shader.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/camera.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/vbo.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/vertexLayout.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/../types/mesh.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/ops/draw.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/gl/vbo.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/shaders/defaultShaders.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/image.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/font.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/props.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/line.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/scene.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/textureStream.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/textureStreamAudio.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/pingpong.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../gl/pyramid.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/light.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/label.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/../window.h \
+  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/types/polyline.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/html5.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/eventloop.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/console.h \
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/html5_webgl.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/ops/meshes.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/ops/../types/mesh.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/ops/../types/image.h \
@@ -982,5 +1006,4 @@ deps/vera/src/CMakeFiles/vera.dir/types/model.cpp.o: \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/ops/../types/triangle.h \
   /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/ops/string.h \
   /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/sstream \
-  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/iomanip \
-  /home/patricio/Desktop/vera_gsplat/deps/vera/include/vera/shaders/defaultShaders.h
+  /home/patricio/Desktop/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/iomanip
